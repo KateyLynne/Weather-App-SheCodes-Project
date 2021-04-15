@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css"/>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    
+    <script
+      src="https://kit.fontawesome.com/3e5c09f50f.js"
+      crossorigin="anonymous"></script>
+
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Weather App</title>
+  </head>
+  <body>
+      <div class="container">
+      <div class="weather-app">
+        <form class= "search-form" id="search-form">
+          <div class="row">
+            <div class="col">
+              <div class="enter-city" id = "enter-city">
+                <input
+                  type="search"
+                  id="city-input"
+                  class="form-control"
+                  placeholder="Enter City"
+                  autofocus
+                />
+              </div>
+            </div>
+          </div>
+          
+           <div class="row">
+            <div class="col">
+              <button type="submit" class="btn btn-primary shadow-sm">
+                Search
+              </button>
+              <button type= "click" class="geolocation-button" id="geolocation-button">Current Location</button>
+            </div>
+          </div>
+        </form>
+        <header>
+          <h1 class = "card-title" id = "city">Charlotte</h1>
+          <h1>
+            <h3><span class = "currentDate" id="date"></h3>
+            <p>
+              <span class="temperature" id="temperature">...</span
+                  ><span class="units">
+                      <a href="#" id="fahrenheit-link">°F</a> |
+                      <a href="#" id="celsius-link">°C</a>
+                    
+                  </span>
+              </p>
+              <p><i class="fas fa-sun"></i></p>
+          </h1>
+         
+          <ul class="weather-details">
+            
+            <li>Humidity: <span id="humidity"></span>%</li>
+            <li>Wind: <span id="wind"></span> mph</li>
+            <li>Precipitation: <span id="precipitation"></span></li>
+          </ul>
+        </header>
+
+        <section class="weekly-forecast">
+          <div class="row">
+            <div class="col">
+              <div class="card-group">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Fri</h4>
+                    <i class="fas fa-cloud-sun"></i>
+                    <hr />
+
+                    <p class="card-text"><strong>55°F</strong> | 30°F</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Sat</h4>
+                  <i class="fas fa-cloud-sun"></i>
+                  <hr />
+                  <p class="card-text"><strong>52°F</strong> | 26°F</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Sun</h5>
+                  <i class="fas fa-sun"></i>
+                  <hr />
+                  <p class="card-text"><strong>53°F</strong> | 25°F</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Mon</h5>
+                  <i class="fas fa-cloud-sun"></i>
+                  <hr />
+                  <p class="card-text"><strong>57°F</strong> | 30°F</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Tues</h5>
+                  <i class="fas fa-sun"></i>
+                  <hr />
+                  <p class="card-text"><strong>64°F</strong> | 37°F</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <footer><a href="https://github.com/KateyLynne/Weather-App.git" target="_blank" class="link">Open-Source Code </a> by Katey Silvers</footer>
+    <script src="script.js"></script>
+  </body>
+</html>
