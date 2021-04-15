@@ -1,0 +1,120 @@
+body {
+  background: white;
+}
+
+.container {
+  display: center;
+  font-family: "Roboto Condensed", sans-serif;
+  margin-top: 30px;
+  padding: 20px;
+  font-size: 36px;
+}
+.weather-app {
+  background: radial-gradient(
+    circle at 7.5% 24%,
+    rgb(237, 161, 193) 0%,
+    rgb(250, 178, 172) 25.5%,
+    rgb(190, 228, 210) 62.3%,
+    rgb(215, 248, 247) 93.8%
+  );
+  border: 1px solid #883c82;
+  padding: 40px;
+  margin: 10px auto;
+  border-radius: 10px;
+  max-width: 700px;
+}
+header {
+  margin-top: 30px;
+}
+
+h1 {
+  font-size: 70px;
+  font-weight: bold;
+  text-align: center;
+  color: #883c82;
+}
+
+h3 {
+  text-align: center;
+  color: #883c82;
+  font-size: 26px;
+}
+
+p {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  color: #883c82;
+}
+
+i.fa-sun {
+  font-size: 70px;
+  color: #ffebbb;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.weather-details {
+  list-style: none;
+  text-align: center;
+  color: #883c82;
+  padding: 20px;
+  font-size: 20px;
+}
+
+.form-control {
+  min-width: 0;
+  width: auto;
+  display: block;
+  margin-top: 0;
+  font-size: 20px;
+}
+.btn-primary {
+  margin-top: 10px;
+  background: #50b6bb;
+  border: #50b6bb;
+  color: white;
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+.btn-primary:hover {
+  background: #51adcf;
+  transition: all 200ms ease;
+}
+
+.geolocation-button {
+  margin-top: 10px;
+  background: #4ba9f2;
+  color: white;
+  font-size: 18px;
+  border: #4ba9f2;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.weekly-forecast {
+  margin-top: 20px;
+  text-align: center;
+  color: #883c82;
+  font-size: 20px;
+}
+.card-body {
+  background: #fffdfb;
+  border-radius: 15px;
+  max-width: 200px;
+}
+.card-title {
+  font-size: 30px;
+}
+
+.fa-cloud-sun,
+.fa-sun {
+  color: #f9cd76;
+  font-size: 33px;
+}
+
+footer {
+  text-align: center;
+  margin-bottom: 20px;
+}
