@@ -7,7 +7,6 @@ body {
   font-family: "Roboto Condensed", sans-serif;
   margin-top: 30px;
   padding: 20px;
-  font-size: 36px;
 }
 .weather-app {
   background: radial-gradient(
@@ -28,7 +27,7 @@ header {
 }
 
 h1 {
-  font-size: 70px;
+  font-size: 20px;
   font-weight: bold;
   text-align: center;
   color: #883c82;
@@ -41,17 +40,28 @@ h3 {
 }
 
 p {
-  font-size: 36px;
+  font-size: 37px;
   font-weight: bold;
   text-align: center;
   color: #883c82;
 }
 
-i.fa-sun {
-  font-size: 70px;
+.weather-icon img.fa-sun {
+  font-size: 40px;
+
   color: #ffebbb;
   margin-top: 10px;
   text-align: center;
+}
+
+.fa-cloud-sun {
+  color: #f9cd76;
+  font-size: 35px;
+}
+
+.fa-sun {
+  color: #ffebbb;
+  font-size: 35px;
 }
 
 .weather-details {
@@ -93,6 +103,21 @@ i.fa-sun {
   padding: 5px 10px;
 }
 
+li {
+  list-style: none;
+  color: #883c82;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+section {
+  color: #883c82;
+}
+
+.current-weather-icon {
+  text-align: center;
+}
+
 .weekly-forecast {
   margin-top: 20px;
   text-align: center;
@@ -106,12 +131,6 @@ i.fa-sun {
 }
 .card-title {
   font-size: 30px;
-}
-
-.fa-cloud-sun,
-.fa-sun {
-  color: #f9cd76;
-  font-size: 33px;
 }
 
 footer {

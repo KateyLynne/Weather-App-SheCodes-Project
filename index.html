@@ -53,29 +53,38 @@
           </div>
         </form>
         <header>
-          <h1 class = "card-title" id = "city">Charlotte</h1>
+          <h1 class = "card-title" id="city"></h1>
           <h1>
-            <h3><span class = "currentDate" id="date"></h3>
+            <h3><span class ="currentDate" id="date"></h3>
             <p>
-              <span class="temperature" id="temperature">...</span
-                  ><span class="units">
+              
+              <div class="weather-temperature" id="temperature">...</div
+                  >
+                  <img src="http://openweathermap.org/img/wn/04n@2x.png"
+                  alt="clear"
+                  class="current-weather-icon"
+                  /><span class="units">
                       <a href="#" id="fahrenheit-link">°F</a> |
-                      <a href="#" id="celsius-link">°C</a>
-                    
-                  </span>
+                      <a href="#" id="celsius-link" class="active">°C</a>
+                    </span>
               </p>
-              <p><i class="fas fa-sun"></i></p>
+              <p><i class="weather-icon" id="fas fa-sun"></i></p>
           </h1>
-         
-          <ul class="weather-details">
-            
+           <div>
+             <ul>
+               <li id="description">
+               </li>
+             </ul>
+             <br/>
+          <ul>
             <li>Humidity: <span id="humidity"></span>%</li>
             <li>Wind: <span id="wind"></span> mph</li>
             <li>Precipitation: <span id="precipitation"></span></li>
           </ul>
+          </div>
         </header>
 
-        <section class="weekly-forecast">
+        <section class="weather-forecast" id="forecast">
           <div class="row">
             <div class="col">
               <div class="card-group">
@@ -138,7 +147,7 @@
         </section>
       </div>
     </div>
-    <footer><a href="https://github.com/KateyLynne/Weather-App.git" target="_blank" class="link">Open-Source Code </a> by Katey Silvers</footer>
-    <script src="script.js"></script>
+    <footer><small><a href="https://github.com/KateyLynne/WeatherApp" target="_blank" class="link">Open-Source Code </a> by Katey Silvers</small></footer>
+    <script src="src/index.js"></script>
   </body>
 </html>
