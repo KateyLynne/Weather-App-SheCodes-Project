@@ -33,10 +33,19 @@ function formatDate(timestamp) {
   return formattedDate;
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
+}
+
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
 
-  let days = ["Thurs", "Fri", "Sat", "Sun", "Mon"];
+  let days = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
+
+  return days[day];
+}
 
   let forecastHTML = `<div class ="row">`;
   days.forEach(function (forecastDay, index) {
