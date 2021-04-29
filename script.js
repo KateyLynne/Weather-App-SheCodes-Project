@@ -32,6 +32,42 @@ function formatDate(timestamp) {
   let formattedDate = `${day}, ${month} ${date}, ${year} ${hour}:${minute}`;
   return formattedDate;
 }
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Thurs", "Fri", "Sat", "Sun", "Mon"];
+
+  let forecastHTML = `<div class ="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+  <div class="weather-forecast-date">${day}</div>
+ <img src="http://openweathermap.org/img/wn/04n@2x.png"
+                  alt="clear"
+                  width="42"/>
+                  <div class="weather-forecast-temperatures">
+                  <span class="weather-forecast-temperature-max">66°</span>
+                  <span class="weather-forecast-temperature-min">19°</span>
+                  </div>
+                  </div>
+                  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+function.getForecast(coordinates) {
+  let apiKey = "24f2d5d36b4c40e473a9a9526b9d4c9d";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+getForecast(response.data.coord);
+}
+
 let now = new Date();
 let dateFunction = document.querySelector(".currentDate");
 dateFunction.innerHTML = formatDate(now);
@@ -42,6 +78,7 @@ function displayTemperature(response) {
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
+  let iconElement = document.querySelector("#icon");
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
@@ -49,7 +86,9 @@ function displayTemperature(response) {
   windElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
   fahrenheitTemperature = response.data.main.temp;
+  iconElement.setAttribute("src");
 }
+
 function searchCity(city) {
   let apiKey = "24f2d5d36b4c40e473a9a9526b9d4c9d";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
@@ -93,4 +132,6 @@ let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
 let currentLocationButton = document.querySelector("#geolocation-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
 searchCity("Charlotte");
+displayForecast();

@@ -46,24 +46,6 @@ p {
   color: #883c82;
 }
 
-.weather-icon img.fa-sun {
-  font-size: 40px;
-
-  color: #ffebbb;
-  margin-top: 10px;
-  text-align: center;
-}
-
-.fa-cloud-sun {
-  color: #f9cd76;
-  font-size: 35px;
-}
-
-.fa-sun {
-  color: #ffebbb;
-  font-size: 35px;
-}
-
 .weather-details {
   list-style: none;
   text-align: center;
@@ -110,30 +92,12 @@ li {
   text-align: center;
 }
 
-section {
-  color: #883c82;
-}
-
-.current-weather-icon {
-  text-align: center;
-}
-
-.weekly-forecast {
-  margin-top: 20px;
-  text-align: center;
-  color: #883c82;
-  font-size: 20px;
-}
-.card-body {
-  background: #fffdfb;
-  border-radius: 15px;
-  max-width: 200px;
-}
-.card-title {
-  font-size: 30px;
-}
-
 footer {
   text-align: center;
   margin-bottom: 20px;
+}
+
+.weather-forecast {
+  text-align: center;
+  margin-top: 20px;
 }
