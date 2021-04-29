@@ -39,20 +39,28 @@ function displayForecast() {
   let days = ["Thurs", "Fri", "Sat", "Sun", "Mon"];
 
   let forecastHTML = `<div class ="row">`;
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="col-2">
-  <div class="weather-forecast-date">${day}</div>
- <img src="http://openweathermap.org/img/wn/04n@2x.png"
+  days.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="col-2">
+  <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
+ <img src="http://openweathermap.org/img/wn/${
+   forecastDay.weather[0].icon
+ }@2x.png"
                   alt=""
                   width="42"/>
                   <div class="weather-forecast-temperatures">
-                  <span class="weather-forecast-temperature-max">66°</span>
-                  <span class="weather-forecast-temperature-min">19°</span>
+                  <span class="weather-forecast-temperature-max"> ${Math.round(
+                    forecastDay.temp.max
+                  )}° </span>
+                  <span class="weather-forecast-temperature-min"< ${Math.round(
+                    forecastDay.temp.min
+                  )}° </span>
                   </div>
                   </div>
                   `;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
@@ -103,6 +111,7 @@ function handleSubmit(event) {
   let city = document.querySelector("#city-input").value;
   searchCity(city);
 }
+
 function userLocation(position) {
   let apiKey = "24f2d5d36b4c40e473a9a9526b9d4c9d";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=imperial`;
