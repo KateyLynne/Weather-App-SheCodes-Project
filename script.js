@@ -79,9 +79,6 @@ function getForecast(coordinates) {
   axios.get(apiUrl).then(displayForecast);
 }
 
-let now = new Date();
-let dateFunction = document.querySelector(".currentDate");
-dateFunction.innerHTML = formatDate(now);
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
