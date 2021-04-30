@@ -132,7 +132,7 @@ let dateElement = document.querySelector("#date");
 let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
 let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", handleSubmit);
+searchForm.addEventListener("click", handleSubmit);
 
 searchCity("Charlotte");
 displayForecast();
