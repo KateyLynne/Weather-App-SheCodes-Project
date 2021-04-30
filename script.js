@@ -138,4 +138,3 @@ let currentLocationButton = document.querySelector("#geolocation-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 searchCity("Charlotte");
-displayForecast();
