@@ -133,6 +133,8 @@ let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
+let currentLocationButton = document.querySelector("#geolocation-button");
+currentLocationButton.addEventListener("click", getCurrentLocation);
 
 let currentLocationButton = document.querySelector("#geolocation-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
