@@ -54,6 +54,7 @@ p {
 }
 
 .weather-details {
+  margin-top: 10px;
   list-style: none;
   text-align: center;
   color: #883c82;
