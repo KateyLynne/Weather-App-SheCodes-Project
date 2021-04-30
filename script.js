@@ -114,8 +114,8 @@ function searchCity(city) {
 }
 function handleSubmit(event) {
   event.preventDefault();
-  let cityInputElement = document.querySelector("#city-input").value;
-  searchCity(cityInputElement.value);
+  let city = document.querySelector("#city-input").value;
+  searchCity(city);
 }
 
 function userLocation(position) {
