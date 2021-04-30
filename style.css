@@ -82,8 +82,16 @@ li {
   text-align: center;
 }
 
+.city {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: #883c82;
+}
+
 .units {
   color: #883c82;
+  font-size: 32px;
 }
 
 footer {
