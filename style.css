@@ -103,6 +103,11 @@ li {
   text-align: center;
 }
 
+.weather-forecast {
+  color: #883c82;
+  font-size: 22px;
+}
+
 footer {
   text-align: center;
   margin-bottom: 20px;
