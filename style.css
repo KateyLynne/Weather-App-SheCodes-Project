@@ -75,21 +75,15 @@ p {
   transition: all 200ms ease;
 }
 
-.geolocation-button {
-  margin-top: 10px;
-  background: #4ba9f2;
-  color: white;
-  font-size: 18px;
-  border: #4ba9f2;
-  border-radius: 5px;
-  padding: 5px 10px;
-}
-
 li {
   list-style: none;
   color: #883c82;
   text-transform: capitalize;
   text-align: center;
+}
+
+.units {
+  color: yellow;
 }
 
 footer {
