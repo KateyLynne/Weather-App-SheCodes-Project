@@ -89,9 +89,10 @@ li {
   color: #883c82;
 }
 
-.units {
+.weather-temperature {
   color: #883c82;
   font-size: 28px;
+  text-align: center;
 }
 
 footer {
