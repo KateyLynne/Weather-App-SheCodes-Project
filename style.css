@@ -47,7 +47,7 @@ p {
 }
 
 .current-weather-icon {
-  position: absolute;
+  position: relative;
   margin-top: 30px;
   top: 60%;
   left: 40%;
