@@ -94,6 +94,9 @@ li {
   font-size: 28px;
   text-align: center;
 }
+.current-weather-icon {
+  text-align: center;
+}
 
 footer {
   text-align: center;
