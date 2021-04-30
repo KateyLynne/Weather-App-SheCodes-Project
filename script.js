@@ -128,15 +128,6 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(userLocation);
 }
 
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  let currentTemperature = document.querySelector("#temperature");
-  currentTemperature.innerHTML = Math.round(fahrenheitTemperature);
-}
-let fahrenheitTemperature = null;
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", convertToFahrenheit);
 let dateElement = document.querySelector("#date");
 let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
