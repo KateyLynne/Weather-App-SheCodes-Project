@@ -127,21 +127,14 @@ function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(userLocation);
 }
-function convertToCelsius(event) {
-  event.preventDefault();
-  let currentTemperature = document.querySelector("#temperature");
-  currentTemperature.innerHTML = Math.round(
-    ((fahrenheitTemperature - 32) * 5) / 9
-  );
-}
+
 function convertToFahrenheit(event) {
   event.preventDefault();
   let currentTemperature = document.querySelector("#temperature");
   currentTemperature.innerHTML = Math.round(fahrenheitTemperature);
 }
 let fahrenheitTemperature = null;
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", convertToCelsius);
+
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
 let dateElement = document.querySelector("#date");
@@ -153,3 +146,4 @@ let currentLocationButton = document.querySelector("#geolocation-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 searchCity("Charlotte");
+displayForecast();
