@@ -47,10 +47,8 @@ p {
 }
 
 .current-weather-icon {
-  position: absolute;
-  margin-top: 20px;
-  top: 50%;
-  left: 50%;
+  display: block;
+  margin: 0 auto;
 }
 
 .weather-details {
@@ -90,6 +88,9 @@ li {
   text-align: center;
 }
 
+ul {
+  padding: 0;
+}
 .city {
   font-size: 34px;
   font-weight: bold;
