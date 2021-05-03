@@ -10,28 +10,25 @@
       integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
       crossorigin="anonymous"
     />
-
-    <link rel="stylesheet" href="style.css"/>
-
+    <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"
       rel="stylesheet"
     />
-    
     <script
       src="https://kit.fontawesome.com/3e5c09f50f.js"
-      crossorigin="anonymous"></script>
-
-      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Weather App</title>
   </head>
   <body>
-      <div class="container">
+    <div class="container">
       <div class="weather-app">
-        <form class= "search-form" id="search-form">
+        <form class="search-form" id="search-form">
           <div class="row">
             <div class="col">
-              <div class="enter-city" id = "enter-city">
+              <div class="enter-city" id="enter-city">
                 <input
                   type="search"
                   id="city-input"
@@ -42,60 +39,46 @@
               </div>
             </div>
           </div>
-          
-           <div class="row">
+          <div class="row">
             <div class="col">
               <button type="submit" class="btn btn-primary shadow-sm">
                 Search
               </button>
-              
             </div>
           </div>
         </form>
         <header>
-          <h1 class = "city" id="city">Charlotte</h1>
-          <h1>
-            <h3><span class ="currentDate" id="date"></span></h3>
-          
-              <div class="weather-temperature"> <span id="temperature"></span> <span class="units"> °F</span></div>
-            
-                  <img src="http://openweathermap.org/img/wn/04n@2x.png"
-                  alt="clear"
-                  class="current-weather-icon"
-                  id="icon"
-                  />
-                         
+          <h1 class="city" id="city">Charlotte</h1>
+          <h3><span class="currentDate" id="date"></span></h3>
+          <div class="weather-temperature">
+            <span id="temperature"></span> <span class="units"> °F</span>
+          </div>
+          <img
+            src="http://openweathermap.org/img/wn/04n@2x.png"
+            alt="clear"
+            class="current-weather-icon"
+            id="icon"
+          />
           <ul>
             <li id="description"></li>
             <li>Humidity: <span id="humidity"></span>%</li>
             <li>Wind: <span id="wind"></span> mph</li>
-        
           </ul>
         </header>
-
-        <div class="weather-forecast" id="forecast">
-         
-  <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
- <img
- src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
-                  alt=""
-                  width="42"
-                  />
-                  <div class="weather-forecast-temperatures">
-                  <span class="weather-forecast-temperature-max"> ${Math.round(
-                    forecastDay.temp.max
-                  )}° </span>
-                  <span class="weather-forecast-temperature-min"> ${Math.round(
-                    forecastDay.temp.min
-                  )}° </span>
-                  </div>
-                  </div>
-          
-        </div>
+        <div class="weather-forecast" id="forecast"></div>
+      </div>
+      <footer>
+        <small
+          ><a
+            href="https://github.com/KateyLynne/Weather-App-SheCodes-Project.git"
+            target="_blank"
+            class="link"
+            >Open-Source Code
+          </a>
+          by Katey Silvers</small
+        >
+      </footer>
     </div>
-  </div>
-    </body>
-    <footer><small><a href="https://github.com/KateyLynne/Weather-App-SheCodes-Project.git" target="_blank" class="link">Open-Source Code </a> by Katey Silvers</small></footer>
- <script src="script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
